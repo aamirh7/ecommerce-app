@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title';
 
@@ -6,6 +6,7 @@ import Title from './Title';
 const LatestCollection = () => {
 
     const { products } = useContext(ShopContext);
+    const [latestProducts, setLatestProducts] = useState([]);
     console.log(products);
 
     return (
@@ -14,6 +15,7 @@ const LatestCollection = () => {
                 <Title text1={'LATEST'} text2={'COLLECTION'} />
                 <p className='w-3/4 m-auto text-xs md:text-base text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, laudantium voluptas? Numquam labore inventore reprehenderit. Aperiam magni sequi voluptates similique laborum neque voluptatum velit quaerat itaque est, corporis, excepturi quis!</p>
             </div>
+
         </div>
     )
 }
